@@ -1,1 +1,6 @@
-export { Application, Router } from "https://deno.land/x/oak@v4.0.0/mod.ts";
+export {
+  Application,
+  Router,
+  Request,
+  Response,
+} from "https://deno.land/x/oak@v4.0.0/mod.ts";
