@@ -1,3 +1,7 @@
+/** 
+ * Define external dependencies here.
+*/
+
 export {
   Application,
   Router,

@@ -1,5 +1,6 @@
 import { Request, Response } from "../deps.ts";
 
+/** Get an article info. */
 export const get = async (
   { params, response }: { params: { slug: string }; response: Response },
 ) => {

@@ -1,10 +1,12 @@
 import { Request, Response } from "../deps.ts";
 import { LoginInfo } from "../types/mod.ts";
 
+/** Get the current user info. */
 export const current = async ({ response }: { response: Response }) => {
   response.body = { email: "admin@example.com", username: "conduit" };
 };
 
+/** Login a user. */
 export const login = async (
   { request, response }: { request: Request; response: Response },
 ) => {

@@ -1,6 +1,7 @@
 import { Application } from "./deps.ts";
 import { router } from "./routes/mod.ts";
 
+/** The main entrance of the app. */
 export async function run_app() {
   const app = new Application();
 
