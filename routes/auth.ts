@@ -1,8 +1,20 @@
 import { Request, Response } from "../deps.ts";
-import { LoginInfo } from "../types/mod.ts";
+
+import { LoginInfo, UserInfo } from "../types/mod.ts";
+import { User } from "../schemas/mod.ts";
 
 /** Get the current user info. */
 export const current = async ({ response }: { response: Response }) => {
+  await User.create([{
+    username: "jetli",
+    email: "aaa@aaa.com",
+    password: "aaa",
+  }]);
+
+  const user: UserInfo = await User.first();
+
+  console.log(user.username);
+
   response.body = { email: "admin@example.com", username: "conduit" };
 };
 
